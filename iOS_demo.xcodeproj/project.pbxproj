@@ -41,7 +41,7 @@
 		EF46AB572384DE2500BDDDA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF85DEE1238597DC001891B5 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyTableViewCell.swift; path = ../../MyTableViewCell.swift; sourceTree = "<group>"; };
 		EF85DEE323859802001891B5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ../../DetailViewController.swift; sourceTree = "<group>"; };
-		EF85DEE52385A4D3001891B5 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		EF85DEE52385A4D3001891B5 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ComposeViewController.swift; path = ../../ComposeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,6 @@
 		EF46AB342384DE2300BDDDA0 = {
 			isa = PBXGroup;
 			children = (
-				EF85DEE52385A4D3001891B5 /* ComposeViewController.swift */,
 				EF46AB3F2384DE2300BDDDA0 /* iOS_demo */,
 				EF46AB542384DE2500BDDDA0 /* iOS_demoTests */,
 				EF46AB3E2384DE2300BDDDA0 /* Products */,
@@ -115,6 +114,7 @@
 		EF46AB632384E81200BDDDA0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EF85DEE52385A4D3001891B5 /* ComposeViewController.swift */,
 				EF46AB422384DE2300BDDDA0 /* ViewController.swift */,
 				EF85DEE323859802001891B5 /* DetailViewController.swift */,
 			);
