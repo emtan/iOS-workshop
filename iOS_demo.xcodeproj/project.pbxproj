@@ -13,8 +13,9 @@
 		EF46AB482384DE2500BDDDA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF46AB472384DE2500BDDDA0 /* Assets.xcassets */; };
 		EF46AB4B2384DE2500BDDDA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF46AB492384DE2500BDDDA0 /* LaunchScreen.storyboard */; };
 		EF46AB562384DE2500BDDDA0 /* iOS_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF46AB552384DE2500BDDDA0 /* iOS_demoTests.swift */; };
-		EF46AB612384E7C000BDDDA0 /* tableViewCelll.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF46AB602384E7C000BDDDA0 /* tableViewCelll.swift */; };
-		EF46AB652384EF4F00BDDDA0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF46AB642384EF4F00BDDDA0 /* DetailViewController.swift */; };
+		EF85DEE2238597DC001891B5 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF85DEE1238597DC001891B5 /* MyTableViewCell.swift */; };
+		EF85DEE423859802001891B5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF85DEE323859802001891B5 /* DetailViewController.swift */; };
+		EF85DEE62385A4D3001891B5 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF85DEE52385A4D3001891B5 /* ComposeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +39,9 @@
 		EF46AB512384DE2500BDDDA0 /* iOS_demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_demoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF46AB552384DE2500BDDDA0 /* iOS_demoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_demoTests.swift; sourceTree = "<group>"; };
 		EF46AB572384DE2500BDDDA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF46AB602384E7C000BDDDA0 /* tableViewCelll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewCelll.swift; sourceTree = "<group>"; };
-		EF46AB642384EF4F00BDDDA0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EF85DEE1238597DC001891B5 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyTableViewCell.swift; path = ../../MyTableViewCell.swift; sourceTree = "<group>"; };
+		EF85DEE323859802001891B5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ../../DetailViewController.swift; sourceTree = "<group>"; };
+		EF85DEE52385A4D3001891B5 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		EF46AB342384DE2300BDDDA0 = {
 			isa = PBXGroup;
 			children = (
+				EF85DEE52385A4D3001891B5 /* ComposeViewController.swift */,
 				EF46AB3F2384DE2300BDDDA0 /* iOS_demo */,
 				EF46AB542384DE2500BDDDA0 /* iOS_demoTests */,
 				EF46AB3E2384DE2300BDDDA0 /* Products */,
@@ -104,7 +107,7 @@
 		EF46AB622384E7E800BDDDA0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EF46AB602384E7C000BDDDA0 /* tableViewCelll.swift */,
+				EF85DEE1238597DC001891B5 /* MyTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,7 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				EF46AB422384DE2300BDDDA0 /* ViewController.swift */,
-				EF46AB642384EF4F00BDDDA0 /* DetailViewController.swift */,
+				EF85DEE323859802001891B5 /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -219,10 +222,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF46AB612384E7C000BDDDA0 /* tableViewCelll.swift in Sources */,
+				EF85DEE62385A4D3001891B5 /* ComposeViewController.swift in Sources */,
 				EF46AB432384DE2300BDDDA0 /* ViewController.swift in Sources */,
+				EF85DEE2238597DC001891B5 /* MyTableViewCell.swift in Sources */,
 				EF46AB412384DE2300BDDDA0 /* AppDelegate.swift in Sources */,
-				EF46AB652384EF4F00BDDDA0 /* DetailViewController.swift in Sources */,
+				EF85DEE423859802001891B5 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
