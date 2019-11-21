@@ -42,7 +42,7 @@ You should see that we now have an "invisible" Navigation Controller on the stor
 
 12. Add a `UIBarButtonItem` to the navigation bar of our root ViewController and change its type to "Compose". **CTRL + Drag** from this "Compose" button to the other ViewController with the "Cancel" and "Done" bar buttons and select **"Modal"** segue. 
 
-For the transitions caused by the "Done" and "Cancel" buttons, we will use **unwind segues** -- almost like we want to *unwind* back to our root ViewController. To do so:
+For the transitions caused by the "Done" and "Cancel" buttons, we will use **unwind segues** -- almost like we want to *unwind* back to our root ViewController. We will discuss these later on in the tutorial -- sit tight for now.
 
 Finally, let's talk about the *placement* of these UI elements.
 
@@ -50,17 +50,12 @@ Finally, let's talk about the *placement* of these UI elements.
 
 Because there are many different "sizes" and "orientations" of iOS devices (e.g., different versions of iPhones, iPads, and being able to flip them around), the size and location of UI elements on the screen need to be constrained *relative* to other elements and/or the border of the screen. This way, our UI won't change in "appearance" when the size and/or orientation of the screen changes. Let's go back and add our constraints. 
 
-To add a constraint, first click on a UI element and then clicking the constraints button at the bottom right corner of the storyboard screen (it looks like a square connected on the left and right to vertical lines). Then, add the following constraints to each UI element:
-  * `UITableView`:
-  * `UITableViewCell`:
-  * `UILabel` on the table view cell:
-  * Both `UITextView`:
-  * 
+To add a constraint, first click on a UI element and then clicking the constraints button at the bottom right corner of the storyboard screen (it looks like a square connected on the left and right to vertical lines). Let's add constraints to each UI element as how we see fit/aesthetic.
   
-Phew! It looks like everything seems to look like how we want our app to appear. If we run the app right now on our **Simulator** (click the "Play" arrow button at the top left corner of Xcode), we should see our starting ViewController with a table view, cells, "My Journal" displayed and the "Compose" button.
+Phew! It *looks* like everything seems to look like how we want our app to appear. If we run the app right now on our **Simulator** (click the "Play" arrow button at the top left corner of Xcode), we should see our starting ViewController with a table view, cells, "My Journal" displayed and the "Compose" button.
 
 ### Understanding MVC
-The architectural design of an app can be divided into the **Model** - **View** - **Controller** ("MVC"). The UI work we did in the previous section constructed parts of the **View**. Now we need the other two.
+The architectural design of an app can be divided into the **Model** - **View** - **Controller** ("MVC"). Simply put: The Model holds the data; the View holds the visuals; the Controller acts as the intermediary. The UI work we did in the previous section constructed parts of the **View**. Now we need the other two.
 
 Let's start with the Model since it only needs to speak to the Controllers. Note that generally in commercial apps, the Model is a remote database. However, for learning and simplicity purposes, we will build it ourselves.
 
@@ -94,6 +89,12 @@ First, we create controllers for each of our app's "Views" (i.e., screens). Crea
 18. Similarly, create a new Cocoa Touch Class file that is a subclass of `UITableViewCell` and name it "MyTableViewCell". Link the table view cell on the storyboard to this class. In addition, change the name of the table view cell in the storyboard navigator to "MyTableViewCell".
 19. Now, we can use the **CTRL + Drag** functionality to connect each of the UI elements on the storyboard to the controller files they correspond and create IBOutlets. To do so, first open up the **Assistant Editor** that allows you to open two files at the same time next to each other (a button at the top right of the workspace that looks like overlapping circles). Name each IBOutlet appropriately. Make sure to connect IBOutlets *above* the `viewDidLoad()` function. 
 
+Let's also return to our "Cancel" and "Done" unwind segues and add IBActions to them. However, the key thing to note about unwind segues: the action needs to be written in the *destination controller*. 
+* Since we are unwinding back to our root ViewController, we write in there two functions: `@IBAction func saveDraft(segue: UIStoryboardSegue)` and `@IBAction func cancelDraft(segue: UIStoryboardSegue)`.
+* Next, **CTRL + Drag** from each of the buttons to the **Exit** icon at the top of the ComposeViewController (it looks like a red opening door with an arrow leaving) and select the correct function names.
+
+Now if we run the app and click the "Compose" button, we should be able to transition to our Compose screen and clicking either "Cancel" or "Done" will transition us back.
+
 ### Protocols and Delegates/Data Source
 
 Protocols in iOS are just "rules" or "blueprints" (like functions) that objects/classes need to implement. Delegates are just that: the delegates of information -- they pass information to the UI. The Data Source is like a Delegate, but instead of communicating with the UI, the Data Source communicates with our Data (the "Model"). In our case, the root ViewController is acting as both the Delegate of our table view *and* the Data Source of our table view. 
@@ -112,8 +113,8 @@ At this point, you'll probably notice that Swift is yelling at us that `ViewCont
   
 With our table view set up, we can move onto adding things to it. In our ComposeViewController, everytime we click "Done", we want to be able to store what we've written into the EntryDatabase and have the information also appear on our table view. Let's revisit the `saveDraft()` function:
 
-21. 
-22.
+21. Create an instance Entry variable `newEntry` in ComposeViewController to represent the new Entry object we are "composing". Each time we click "Save" we want to so we create an instance of our segue source ("ComposeViewController") and set `newEntry` to a new addition into our database at row 0 (i.e., the front of our database) each time we segue. 
+22. Then, on the View side, we also insert a new row into our table view using the function `tableView.insertRows()` at an indexPath of row: 0 and section: 0 since our table view only has one section and we are inserting into the top.
 
 Now if we run our app, we should be able to click the Compose button, type a message, Save and see it appear on our table view of journal entries. Yayayaya!
 
