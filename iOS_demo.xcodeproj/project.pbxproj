@@ -16,6 +16,8 @@
 		EF85DEE2238597DC001891B5 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF85DEE1238597DC001891B5 /* MyTableViewCell.swift */; };
 		EF85DEE423859802001891B5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF85DEE323859802001891B5 /* DetailViewController.swift */; };
 		EF85DEE62385A4D3001891B5 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF85DEE52385A4D3001891B5 /* ComposeViewController.swift */; };
+		EFEABBB323860D15001495FC /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEABBB223860D15001495FC /* Entry.swift */; };
+		EFEABBB52386149B001495FC /* EntryDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEABBB42386149B001495FC /* EntryDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +41,11 @@
 		EF46AB512384DE2500BDDDA0 /* iOS_demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_demoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF46AB552384DE2500BDDDA0 /* iOS_demoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_demoTests.swift; sourceTree = "<group>"; };
 		EF46AB572384DE2500BDDDA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF85DEE1238597DC001891B5 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyTableViewCell.swift; path = ../../MyTableViewCell.swift; sourceTree = "<group>"; };
-		EF85DEE323859802001891B5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ../../DetailViewController.swift; sourceTree = "<group>"; };
-		EF85DEE52385A4D3001891B5 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ComposeViewController.swift; path = ../../ComposeViewController.swift; sourceTree = "<group>"; };
+		EF85DEE1238597DC001891B5 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		EF85DEE323859802001891B5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EF85DEE52385A4D3001891B5 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		EFEABBB223860D15001495FC /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		EFEABBB42386149B001495FC /* EntryDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		EF46AB3F2384DE2300BDDDA0 /* iOS_demo */ = {
 			isa = PBXGroup;
 			children = (
+				EF85DEEB23860C60001891B5 /* Model */,
 				EF46AB402384DE2300BDDDA0 /* AppDelegate.swift */,
 				EF46AB442384DE2300BDDDA0 /* Main.storyboard */,
 				EF46AB632384E81200BDDDA0 /* Controllers */,
@@ -119,6 +124,15 @@
 				EF85DEE323859802001891B5 /* DetailViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EF85DEEB23860C60001891B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EFEABBB223860D15001495FC /* Entry.swift */,
+				EFEABBB42386149B001495FC /* EntryDatabase.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +236,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFEABBB52386149B001495FC /* EntryDatabase.swift in Sources */,
+				EFEABBB323860D15001495FC /* Entry.swift in Sources */,
 				EF85DEE62385A4D3001891B5 /* ComposeViewController.swift in Sources */,
 				EF46AB432384DE2300BDDDA0 /* ViewController.swift in Sources */,
 				EF85DEE2238597DC001891B5 /* MyTableViewCell.swift in Sources */,
